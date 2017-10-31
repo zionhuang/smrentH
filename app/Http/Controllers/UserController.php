@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function fixUserInfo(Request $request)
     {
-        return "fixUserInfo";
+        return view('userInfoFix');
     }
 
 
