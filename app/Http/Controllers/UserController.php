@@ -22,6 +22,10 @@ class UserController extends Controller
         return view('userInfoFix');
     }
 
+    public function change(Request $request)
+    {
+        return "change ok";
+    }
 
 
 }

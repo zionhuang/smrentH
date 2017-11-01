@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/fixUserInfo', 'UserController@fixUserInfo');
+
+Route::get('/change', 'UserController@change');
