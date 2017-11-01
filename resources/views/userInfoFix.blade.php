@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><strong>用户信息修改</strong></div>
                     <div class="panel-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                        <form class="form-horizontal" method="POST" action="{{ route('change') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
