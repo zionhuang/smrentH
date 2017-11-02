@@ -8,7 +8,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -24,7 +26,14 @@ class UserController extends Controller
 
     public function change(Request $request)
     {
-        return "change ok";
+        $user = Auth::user();
+        $params = $request->all();
+        $user->name = $params['name'];
+//        User::saving()
+        $result = $user->save();
+        return $user;
+//        $result = $this->user->update($params);
+//        return view('resultChange', $result);
     }
 
 

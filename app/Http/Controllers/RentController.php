@@ -9,17 +9,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\House_Rent;
 
 class RentController extends Controller
 {
-    public function __construct()
-    {
+    private $houseRent;
 
+    public function __construct(House_Rent $houseRent)
+    {
+        $this->houseRent = $houseRent;
     }
 
     public function HouseSeek(Request $request)
     {
-
+        $limit = $request->get('limit');
+        $data = $this->houseRent::all()->take($limit);
+        return $data->toJson();
     }
 
     public function rentWant(Request $request)
