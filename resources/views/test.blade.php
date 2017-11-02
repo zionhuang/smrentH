@@ -67,7 +67,7 @@
                             </li>
                             <li class="text-center">
                                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                                <spqn id="want"><div class="want"></div></spqn>
+                                <span id="want"><div class="want"></div></span>
                             </li>
                             <li id="price" class="text-right"><div class="price"></div></li>
                         </ul>
