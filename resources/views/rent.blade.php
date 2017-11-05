@@ -7,8 +7,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"><strong>求租信息列表</strong></div>
                     <div class="panel-body">
-                        @foreach($posts as $item)
-                            <a href="/post/{{ $item['id'] }}">{{ $item['title'] }}</a>
+                        @foreach($data as $item)
+                            <p> <label for="name" class="col-md-4 control-label"><a href="/post/{{ $item['pid'] }}">{{ $item['title'] }}</a> </label></p>
+                            <br/>
+                        @endforeach
                     </div>
                 </div>
             </div>
