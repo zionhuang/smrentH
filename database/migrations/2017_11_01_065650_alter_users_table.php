@@ -14,7 +14,12 @@ class AlterUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('smid')->default('NULL');
+            $table->string('smid')->nullable();
+            $table->string('wechatId')->nullable();
+            $table->string('university')->nullable();
+            $table->string('industry')->nullable();
+            $table->char('mobile',11)->nullable();
+            $table->char('status')->nullable();
         });
     }
 

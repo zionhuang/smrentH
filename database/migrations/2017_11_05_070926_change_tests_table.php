@@ -15,6 +15,7 @@ class ChangeTestsTable extends Migration
     {
         Schema::table('tests', function (Blueprint $table) {
             $table->string('title',50)->change();
+            $table->text('content')->default('no content')->change();
         });
     }
 
