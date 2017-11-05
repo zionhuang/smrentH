@@ -36,5 +36,10 @@ class UserController extends Controller
 //        return view('resultChange', $result);
     }
 
+    public function test(Request $request)
+    {
+        $data = $request->get('test');
+        return $data;
+    }
 
 }

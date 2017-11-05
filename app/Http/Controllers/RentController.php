@@ -9,13 +9,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\House_Rent;
+use App\HouseRent;
 
 class RentController extends Controller
 {
     private $houseRent;
 
-    public function __construct(House_Rent $houseRent)
+    public function __construct(HouseRent $houseRent)
     {
         $this->houseRent = $houseRent;
     }
