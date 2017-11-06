@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Mockery\Exception;
 
 class PostController extends Controller
 {
@@ -12,19 +13,23 @@ class PostController extends Controller
 
     }
 
-    public function rentIndex(Request $request)
+    public function houseIndex(Request $request)
     {
-        $data = Post::where('post_type',0)->orderBy('updated_at','desc')->take(10)->get();
+        $type = $request->get('type');
+        if (is_null($type)) {
+            return "缺少type参数";
+        }
+        $data = Post::where('post_type',$type)->orderBy('updated_at','desc')->take(10)->get();
         $paramsArr = array();
         foreach ($data as $post) {
             $para = [
+//                'type' => $type ? '求租' : '出租',
                 'pid' => $post->pid,
                 'title' => $post->title,
                 ];
             array_push($paramsArr,$para) ;
         }
-//        dd($paramsArr);
-        return view('rent', ['data' => $paramsArr]);
+        return view('house', ['type' => $type ? '出租' : '求租','data' => $paramsArr]);
     }
 
     public function create(Request $request)
@@ -39,13 +44,8 @@ class PostController extends Controller
         ]);
     }
 
-    public function rentWant(Request $request)
+    public function post(Request $request)
     {
-
-    }
-
-    public function addRentWant(Request $request)
-    {
-
+        return view('post');
     }
 }
