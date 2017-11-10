@@ -1,0 +1,118 @@
+
+.return{
+    display: inline-block;
+    line-height: 20px;
+    font-size: 2em;
+}
+.content-box{
+    margin-top: 10px;
+}
+.nav-return{
+    width: 100%;
+    margin-top: 1%;
+}
+
+div.body{
+    margin-top: 15%;
+}
+.owner-info{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.room-desc{
+    padding:0 10%;
+    width:80%;
+}
+.room-desc,.pic-wrapper{
+    display: inline-block;
+    float: left;
+}
+.pic-wrapper{
+    text-align: center;
+}
+.pic-footer{
+    position: relative;
+    z-index: -1;
+}
+.pic-number{
+    position: absolute;
+    bottom:3px;
+    right:3px;
+    color:white;
+}
+.verify{
+    color:#2991f7;
+    border:1px solid #2991f7;
+    border-radius: 3px 3px ;
+    display: inline-block;
+    padding:2px;
+}
+.none-verify{
+    color: #f74848;
+    display: inline-block;
+    padding:2px;
+}
+/*rommer*/
+.roomer-want{
+    display: block;
+    width: 98%;
+    text-align: center;
+    padding:3px;
+    color:#999;
+    margin-bottom: 15px;
+}
+.roomer-want div,.roomer-want a{
+    display: inline-block;
+    margin:auto;
+}
+.roomer-want a{
+    border:1px solid gray;
+    background-color: aquamarine;
+    border-radius: 3px 3px ;
+    color:#111111;
+}
+.roomer-info{
+    overflow: hidden;
+}
+.roomer-info>div{
+    padding:2px;
+    margin: 2px;
+}
+
+/*star*/
+div.star{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+.star-box {
+    float: left;
+}
+
+/*tab导航栏*/
+.tab-bar{
+    height:2.5em;
+    width:100%;
+    margin-bottom: 5px;
+}
+.tab-btn{
+    display: inline-block;
+    height:2.5em;
+    line-height: 2.5em;
+    width:49%;
+    text-align: center;
+    border-bottom:1px solid #ccc;
+}
+.tab-btn.active{
+    border-bottom:2px solid dodgerblue;
+    color:dodgerblue;
+}
+.tab-bar a:nth-child(1){
+    border-right:1px solid #ccc;
+}
+.info-box{
+    width:60%;
+}
+.info-box ul li{
+    width:90%;
+}

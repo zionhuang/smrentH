@@ -32,4 +32,6 @@ Route::get('/fixUserInfo', 'UserController@fixUserInfo')->name('fix');
 
 Route::post('/change', 'UserController@change')->name('change');
 
-Route::post('/test', 'UserController@test');
+Route::get('/test', 'UserController@test');
+
+//Route::post('/test', 'UserController@test');
