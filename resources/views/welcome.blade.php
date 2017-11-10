@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/rent') }}">出租</a>
-                    <a href="{{ url('/seek') }}">求租</a>
+                    <a href="{{ url('/house?type=0') }}">出租</a>
+                    <a href="{{ url('/house?type=1') }}">求租</a>
                 </div>
             </div>
         </div>
